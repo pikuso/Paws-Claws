@@ -1,0 +1,69 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('path/to/your/animated.gif');
+    background-size: cover;
+    filter: blur(5px);
+}
+
+.game-board {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    border: 1px solid #333;
+    overflow: hidden;
+    z-index: 1; /* чтобы игровое поле было выше фона */
+}
+.game-board {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+.game-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/art-material/back.gif');
+    background-size: cover;
+    filter: blur(5px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
