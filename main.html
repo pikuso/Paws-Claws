@@ -10,11 +10,16 @@
 </head>
 <body>
     <div class="menu-screen">
-        <h1>Welcome to Paws and Claws</h1>
-        <button id="start-button">Start Game</button>
-        <img src="art-material/main.gif" alt="Menu Animation" class="menu-gif">
+        <div class="menu-gif-container">
+            <img src="art-material/main.jpg" alt="Menu Animation" class="menu-gif">
+        </div>
+        <div class="menu-content">
+            <h1 class="typewriter">Welcome to Paws and Claws</h1>
+            <button id="start-button">Start Game</button>
+        </div>
+        <div id="snowflakes-container"></div> <!-- Контейнер для снежинок -->
     </div>
-    
+
     <div class="game-screen" style="display: none;">
         <button id="restart-button">Restart</button>
         <div class="background"></div>

@@ -2,9 +2,78 @@ html, body {
     height: 100%;
     margin: 0;
 }
-#main-background{
-    background-image: url('art-material/main.gif');
+.menu-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
 }
+
+.menu-gif-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Размещает GIF на заднем плане */
+}
+
+.menu-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-content {
+    position: relative;
+    z-index: 1; /* Поверх GIF */
+    text-align: center;
+    font-size: 30px;
+}
+
+.typewriter {
+    overflow: hidden; /* Скрываем текст за пределами контейнера */
+    border-right: .15em solid orange; /* Анимация курсора */
+    white-space: nowrap; /* Запрет на перенос строк */
+    margin: 0 auto; /* Центрирование */
+    letter-spacing: .15em; /* Пробелы между буквами */
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgba(102, 101, 102, 0.534); }
+}
+.menu-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(187, 186, 186, 0.349);
+}
+.menu-content button:hover {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(36, 35, 35, 0.349);
+}
+.menu-content button:active {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(187, 186, 186, 0.349);
+}
+
 
 .background {
     position: fixed;
@@ -16,7 +85,36 @@ html, body {
     background-size: cover;
     filter: blur(5px);
 }
+#snowflakes-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Чтобы снежинки не мешали кликам */
+    z-index: 2; /* Поверх всего остального */
+}
 
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+}
 .game-board {
     position: relative;
     width: 300px;
