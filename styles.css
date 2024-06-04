@@ -1,7 +1,30 @@
 html, body {
-    height: 100%;
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
 }
+
+@media (max-width: 768px) {
+    /* Стили для экранов до 768px ширины */
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Стили для экранов от 768px до 1024px ширины */
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Стили для экранов шириной более 1024px */
+    body {
+        font-size: 18px;
+    }
+}
+
 .menu-screen {
     display: flex;
     flex-direction: column;
@@ -75,8 +98,8 @@ html, body {
 }
 .game-board {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 800px;
+    height: 800px;
     margin: 20px auto;
     border: 1px solid #333;
     overflow: hidden;
@@ -125,4 +148,24 @@ html, body {
 }
 .cell:active {
     background-color: #f0f0f077;
+}
+
+.github-button {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.github-button img {
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+}
+
+.github-button:hover img {
+    filter: brightness(80%);
 }
